@@ -108,9 +108,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\TeamMemeber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +126,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Dashboard\Index.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Login\ChangeEmail.aspx" />
+    <Content Include="Views\Login\ChangePassword.aspx" />
+    <Content Include="Views\Login\ChangePhone.aspx" />
+    <Content Include="Views\Login\Delete.aspx" />
+    <Content Include="Views\Login\Create.aspx" />
+    <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Login\Logout.aspx" />
+    <Content Include="Views\Login\Settings.aspx" />
+    <Content Include="Views\Projects\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -129,11 +148,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Home.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Dashboard.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

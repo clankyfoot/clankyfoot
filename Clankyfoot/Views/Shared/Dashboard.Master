@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><%: Html.ActionLink("Logout", "Logout", controllerName: "Login") %> | </li>
+                <li><%: Html.ActionLink("Settings", "Settings", controllerName: "Login") %> | </li>
+                <li><%: Html.ActionLink("Dashboard", "Projects", controllerName: "Dashboard") %> | </li> 
+                <li><%: Html.ActionLink("Team", "Team", controllerName: "Dashboard") %> | </li>
+                <asp:ContentPlaceHolder ID="NavigationContent" runat="server"></asp:ContentPlaceHolder>
+            </ul>
+        </nav>
+    </header>
+    <div id="body">
+        <asp:ContentPlaceHolder ID="BodyContent" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <footer>
+        <asp:ContentPlaceHolder ID="FooterContent" runat="server"></asp:ContentPlaceHolder>
+    </footer>
+</body>
+</html>
