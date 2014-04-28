@@ -9,6 +9,11 @@ GO
 /*
 	RETURNS...
 		0. if name, email, salt, or password were null
+		/// <summary>
+        /// Updates user email
+        /// <param name="name">username</param>
+        /// <param name="email">new email for the user</param>
+        /// </summary>
 */
 CREATE PROCEDURE cf_Users_Update_email_ByName
 	@name VARCHAR(300), -- REQUIRED
@@ -28,8 +33,10 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		SET @RETURN = ERROR_NUMBER()
+		PRINT ERROR_MESSAGE()
 	END CATCH
 
-	RETURN @RETURN
+	SELECT [xml] FROM dbo.cf_value_to_xml (@RETURN)
+	RETURN
 END
 GO

@@ -1,4 +1,4 @@
-USE [shotski]
+USE [clankyfoot]
 GO
 
 IF(OBJECT_ID('cf_Users_Create') IS NOT NULL)
@@ -9,6 +9,14 @@ GO
 /*
 	RETURNS...
 		0. if name, email, salt, or password were null
+		/// <summary>
+        /// Creates a user
+        /// <param name="name">username</param>
+        /// <param name="email">email of the user</param>
+        /// <param name="phone">phone number</param>
+        /// <param name="password">passsword</param>
+        /// <param name="salt">salt to be used on the user account</param>
+        /// </summary>
 */
 CREATE PROCEDURE cf_Users_Create
 	@name VARCHAR(300), -- REQUIRED
@@ -33,8 +41,10 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		SET @RETURN = ERROR_NUMBER()
+		PRINT ERROR_MESSAGE()
 	END CATCH
 
-	RETURN @RETURN
+	SELECT [xml] FROM dbo.cf_value_to_xml (@RETURN)
+	RETURN
 END
 GO

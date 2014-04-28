@@ -8,6 +8,10 @@ GO
 /*
 	RETURNS...
 		0. if the type parameter was null or empty
+		/// <summary>
+        /// Creates a role
+        /// <param name="type">adds a role type</param>
+        /// </summary>
 */
 CREATE PROCEDURE cf_Role_Type_Create
 	@type VARCHAR(300)
@@ -24,8 +28,10 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		SET @RETURN = ERROR_NUMBER()
+		PRINT ERROR_MESSAGE()
 	END CATCH
 
-	RETURN @RETURN
+	SELECT [xml] FROM dbo.cf_value_to_xml (@RETURN)
+	RETURN
 END
 GO

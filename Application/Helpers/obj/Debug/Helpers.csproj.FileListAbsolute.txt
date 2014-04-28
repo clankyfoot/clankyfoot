@@ -1,0 +1,10 @@
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Helpers\bin\Debug\Helpers.dll
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Helpers\bin\Debug\Helpers.pdb
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Helpers\obj\Debug\Helpers.dll
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Helpers\obj\Debug\Helpers.pdb
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Application\Helpers\bin\Debug\Helpers.dll
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Application\Helpers\bin\Debug\Helpers.pdb
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Application\Helpers\obj\Debug\Helpers.dll
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Application\Helpers\obj\Debug\Helpers.pdb
+C:\Users\CodeBracket\Documents\Visual Studio 2013\Projects\Clankyfoot\Application\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache

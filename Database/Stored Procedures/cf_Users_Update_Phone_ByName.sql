@@ -1,4 +1,4 @@
-USE [shotski]
+USE [clankyfoot]
 GO
 
 IF(OBJECT_ID('cf_Users_Update_Phone_ByName') IS NOT NULL)
@@ -7,7 +7,7 @@ BEGIN
 END
 GO
 /*
-	RETURNS...
+	RETURNS XML with the following values
 		0. if name, email, salt, or password were null
 */
 CREATE PROCEDURE cf_Users_Update_Phone_ByName
@@ -17,6 +17,7 @@ AS
 BEGIN
 	DECLARE @RETURN INT
 	SET @RETURN = 0
+	SET NOCOUNT ON
 
 	IF(@name IS NOT NULL AND @phone IS NOT NULL)
 	BEGIN TRY
@@ -28,8 +29,10 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		SET @RETURN = ERROR_NUMBER()
+		PRINT ERROR_MESSAGE()
 	END CATCH
 
-	RETURN @RETURN
+	SELECT [xml] FROM dbo.cf_value_to_xml (@RETURN)
+	RETURN
 END
 GO
